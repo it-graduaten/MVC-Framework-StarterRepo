@@ -1,0 +1,37 @@
+﻿@model HelloCore.ViewModels.CategorieListViewModel;
+
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h2>Categorieën</h2>
+
+
+<table class="HC">
+	<thead>
+		<tr>
+			<td>
+                @Html.DisplayNameFor(v => v.Categorieën[0].Naam)
+			</td>
+			<td>
+                @Html.DisplayNameFor(v => v.Categorieën[0].Beschrijving)
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		
+			@foreach(var categorie in Model.Categorieën){
+			<tr>
+				<td>
+					@Html.DisplayFor(modelitem => categorie.Naam)
+				</td>
+				<td>
+					@Html.DisplayFor(modelitem => categorie.Beschrijving)
+				</td>
+			</tr>
+			}
+
+	</tbody>
+
+</table>

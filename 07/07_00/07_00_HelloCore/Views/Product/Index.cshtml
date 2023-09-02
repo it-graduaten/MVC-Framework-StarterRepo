@@ -1,0 +1,59 @@
+﻿@model HelloCore.ViewModels.ProductListViewModel
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<form asp-controller="Product" asp-action="Search" method="get">
+	<div class="form-actions no-color">
+		<p>
+			Zoek op product:
+			<input asp-for="ProductSearch">
+			<input type="submit" value="Zoeken" class="btn btn-primary"/>
+			<a asp-controller="Product" asp-action="Index" class="btn btn-primary">Terug naar volledige lijst</a>
+		</p>
+	</div>
+</form>
+<table class="HC">
+	<thead>
+		<tr>
+			<th class="col-md-4">
+				@Html.DisplayNameFor(model => model.Producten[0].ProductID);
+			</th>
+			<th class="col-md-4">
+				@Html.DisplayNameFor(model => model.Producten[0].Naam);
+			</th>
+			<th class="col-md-4">
+				@Html.DisplayNameFor(model => model.Producten[0].Prijs);
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model.Producten)
+		{
+			<tr>
+				<td class="col-md-4">
+					@item.ProductID
+				</td>
+				<td class="col-md-4">
+					@item.Naam
+				</td>
+				<td class="col-md-4">
+					@item.Prijs
+				</td>
+				<td class="col-md-4">
+					<a asp-controller="Product" asp-action="Details" asp-route-id="@item.ProductID" class="btn btn-primary">Details</a>
+
+				</td>
+				<td class="col-md-4">
+					Edit
+				</td>
+				<td class="col-md-4">
+					Delete
+				</td>
+
+			</tr>
+		}
+	</tbody>
+</table>
+

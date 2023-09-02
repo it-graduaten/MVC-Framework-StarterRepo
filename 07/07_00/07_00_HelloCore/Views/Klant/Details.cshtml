@@ -1,0 +1,20 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@model HelloCore.ViewModels.KlantDetailsViewModel
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details @Model.Voornaam @Model.Naam</h1>
+
+<p>
+    Voornaam: @Model.Voornaam
+</p>
+<p>
+    Naam: @Model.Naam
+</p>
+<p>
+    Datum aangemaakt: @Model.AangemaaktDatum
+</p>
+@Html.ActionLink("Terug","Index","Klant")
