@@ -12,7 +12,7 @@ namespace HelloCore.Models
 
         public int KlantID { get; set; }
 
-        public Klant klant { get; set; } = default!;
+        public Klant klant { get; set; } = new Klant()!;
 
         public List<OrderLijn> orderlijnen { get; set; } = new List<OrderLijn>();
     }

@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 
-namespace InterimKantoor.Models
+namespace _08_01_InterimKantoor.Models
 {
     public class Klant
     {
@@ -21,7 +21,7 @@ namespace InterimKantoor.Models
         public string Huisnummer { get; set; } = default!;
         [PersonalData]
         public string Bankrekeningnummer { get; set; } = default!;
-        public IList<KlantJob> klantjobs { get; set; } = default!;
+        public IList<KlantJob> klantjobs { get; set; } = new List<KlantJob>()!;
 
     }
 }

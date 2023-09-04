@@ -1,0 +1,53 @@
+﻿@model _09_00_HelloCore.ViewModels.ProductListViewModel
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<form asp-controller="Product" asp-action="Search" method="get">
+	<div class="form-actions no-color">
+		<p>
+			Zoek op product:
+			<input asp-for="ProductSearch">
+			<input type="submit" value="Zoeken" class="btn btn-primary" />
+			<a asp-controller="Product" class="btn btn-primary" asp-action="Index">Terug naar volledige lijst</a>
+		</p>
+	</div>
+</form>
+<table>
+	<thead>
+		<tr>
+			<th class="col-md-3">
+				@Html.DisplayNameFor(model => model.Producten[0].ProductID)
+			</th>
+			<th class="col-md-3">
+				@Html.DisplayNameFor(model => model.Producten[0].Naam)
+			</th>
+			<th class="col-md-3">
+				@Html.DisplayNameFor(model => model.Producten[0].Prijs)
+			</th>
+		</tr>
+	</thead>
+	<tbody>
+		@foreach(var item in Model.Producten)
+		{
+			<tr>
+				<td class="col-md-3">
+					@item.ProductID
+				</td>
+				<td class="col-md-3">
+					@item.Naam
+				</td>
+				<td class="col-md-3">
+					@item.Prijs
+				</td>
+				<td><a asp-controller="Product" asp-action="Details" class="btn btn-primary" asp-route-id="@item.ProductID">Details</a></td>
+				<td><a asp-controller="Product" class="btn btn-primary">Aanpassen</a> </td>
+				<td><a asp-controller="Product" class="btn btn-primary">Verwijderen</a> </td>
+
+
+			</tr>
+		}
+	</tbody>
+</table>
+

@@ -25,7 +25,7 @@ namespace InterimKantoor.Models
         [Required]
         public int AantalPlaatsen { get; set; }
 
-        public IList<KlantJob> KlantJobs { get; set; } = default!;
+        public IList<KlantJob> KlantJobs { get; set; } = new List<KlantJob>()!;
 
     }
 }

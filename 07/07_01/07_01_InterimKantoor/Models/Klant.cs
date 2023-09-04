@@ -21,7 +21,7 @@ namespace InterimKantoor.Models
         public string Huisnummer { get; set; } = default!;
         [PersonalData]
         public string Bankrekeningnummer { get; set; } = default!;
-        public IList<KlantJob> klantjobs { get; set; } = default!;
+        public IList<KlantJob> klantjobs { get; set; } = new List<KlantJob>()!;
 
     }
 }

@@ -18,7 +18,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\07_00_HelloCore\07_00_HelloCore.csproj" />
+    <ProjectReference Include="..\HelloCore\07_00_HelloCore.csproj" />
   </ItemGroup>
 
 </Project>

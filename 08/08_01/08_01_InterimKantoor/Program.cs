@@ -1,5 +1,5 @@
-using InterimKantoor;
-using InterimKantoor.Data;
+using _08_01_InterimKantoor;
+using _08_01_InterimKantoor.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 

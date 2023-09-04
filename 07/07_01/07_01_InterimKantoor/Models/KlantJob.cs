@@ -12,9 +12,9 @@ namespace InterimKantoor.Models
         public string KlantId { get; set; } = default!;
         public int JobId { get; set; }
 
-        public Klant Klant { get; set; } = default!;
+        public Klant Klant { get; set; } = new Klant()!;
 
-        public Job Job { get; set; } = default!;
+        public Job Job { get; set; } = new Job()!;
 
 
 

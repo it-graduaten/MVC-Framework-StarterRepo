@@ -1,0 +1,23 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace _09_00_HelloCore.Models
+{
+    public class OrderLijn
+    {
+        public int OrderLijnID { get; set; }
+
+        [Required]
+        public double Aantal { get; set; }
+        public int BestellingID { get; set; }
+
+        public Bestelling bestelling { get; set; } = new Bestelling()!;
+
+        public int ProductID { get; set; }
+
+        public Product product { get; set; } = new Product()!;
+    }
+}

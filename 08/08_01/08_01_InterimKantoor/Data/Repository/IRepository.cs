@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace InterimKantoor
+namespace _08_01_InterimKantoor
 {
     public interface IRepository <TEntity> where TEntity : class
     {

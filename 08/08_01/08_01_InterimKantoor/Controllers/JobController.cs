@@ -1,6 +1,6 @@
-﻿using InterimKantoor.Data;
-using InterimKantoor.Models;
-using InterimKantoor.ViewModels;
+﻿using _08_01_InterimKantoor.Data;
+using _08_01_InterimKantoor.Models;
+using _08_01_InterimKantoor.ViewModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Security.Principal;
 using System.Threading.Tasks;
 
-namespace InterimKantoor.Controllers
+namespace _08_01_InterimKantoor.Controllers
 {
     public class JobController : Controller
     {

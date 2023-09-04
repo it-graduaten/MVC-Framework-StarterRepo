@@ -19,6 +19,6 @@ namespace HelloCore.Models
 
         public DateTime AangemaaktDatum { get; set; }
         [JsonIgnore]
-        public IList<Bestelling> bestelling { get; set; } = default!;
+        public IList<Bestelling> bestelling { get; set; } = new List<Bestelling>()!;
     }
 }

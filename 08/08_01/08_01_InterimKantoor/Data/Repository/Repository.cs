@@ -1,4 +1,4 @@
-﻿using InterimKantoor.Data;
+﻿using _08_01_InterimKantoor.Data;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Collections;
 using System.Linq.Expressions;
 
-namespace InterimKantoor
+namespace _08_01_InterimKantoor
 {
     public class Repository<TEntity> : IRepository<TEntity> where TEntity : class { 
         private readonly InterimKantoorContext _context;

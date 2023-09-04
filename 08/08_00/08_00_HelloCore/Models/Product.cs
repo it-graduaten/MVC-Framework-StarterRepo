@@ -13,6 +13,6 @@ namespace HelloCore.Models
         public string Merk { get; set; } = default!;
         public string Beschrijving { get; set; } = default!;
 
-        public IList<OrderLijn> orderlijnen { get; set; } = default!;
+        public IList<OrderLijn> orderlijnen { get; set; } = new List<OrderLijn>()!;
     }
 }

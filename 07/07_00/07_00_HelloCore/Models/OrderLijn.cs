@@ -14,10 +14,10 @@ namespace HelloCore.Models
         public double Aantal { get; set; }
         public int BestellingID { get; set; }
 
-        public Bestelling bestelling { get; set; } = default!;
+        public Bestelling bestelling { get; set; } = new Bestelling()!;
 
         public int ProductID { get; set; }
 
-        public Product product { get; set; } = default!;
+        public Product product { get; set; } = new Product()!;
     }
 }

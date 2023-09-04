@@ -1,0 +1,48 @@
+﻿@model _09_00_HelloCore.ViewModels.KlantListViewModel;
+
+
+@{
+	ViewData["Title"] = "Index";
+}
+
+<h2>Klanten</h2>
+
+<p> <a asp-action="Create" class="btn btn-primary">Create New</a></p>
+<table>
+	<thead>
+		<tr>
+			<td>
+                @Html.DisplayNameFor(v => v.Klanten[0].Naam)
+			</td>
+			<td>
+                @Html.DisplayNameFor(v => v.Klanten[0].Voornaam)
+			</td>
+			<td>
+				@Html.DisplayNameFor(v => v.Klanten[0].AangemaaktDatum)
+			</td>
+		</tr>
+	</thead>
+	<tbody>
+		
+			@foreach(var klant in Model.Klanten){
+			<tr>
+				<td>
+					@Html.DisplayFor(modelitem => klant.Naam)
+				</td>
+				<td>
+					@Html.DisplayFor(modelitem => klant.Voornaam)
+				</td>
+				<td>
+					@Html.DisplayFor(modelitem => klant.AangemaaktDatum)
+				</td>
+				<td><a asp-action="Edit" asp-route-id="@klant.KlantID" class="btn btn-primary">Edit</a></td>
+				<td><a asp-action="Details" asp-route-id="@klant.KlantID" class="btn btn-primary">Details</a></td>
+
+				<td><a asp-action="Delete" asp-route-id="@klant.KlantID" class="btn btn-primary">Delete</a></td>
+				
+			</tr>
+			}
+
+	</tbody>
+
+</table>

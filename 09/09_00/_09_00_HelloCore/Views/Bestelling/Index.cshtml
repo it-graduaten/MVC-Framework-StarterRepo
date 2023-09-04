@@ -1,0 +1,37 @@
+﻿@model _09_00_HelloCore.ViewModels.BestellingListViewModel
+@{
+    ViewData["Title"] = "";
+}
+<h2> Bestellingen</h2>
+
+<a asp-action="AddBestelling" class="btn btn-primary">Nieuwe bestelling</a>
+
+<table class="table">
+    <tr>
+			<td>
+                @Html.DisplayNameFor(v => v.Bestellingen[0].BestellingID)
+			</td>
+			<td>
+                @Html.DisplayNameFor(v => v.Bestellingen[0].KlantID)
+			</td>
+
+        <th></th>
+    </tr>
+    @foreach (var item in Model.Bestellingen)
+    {
+        <tr>
+				<td>
+						@Html.DisplayFor(modelitem => item.BestellingID)
+				</td>
+				<td>
+						@Html.DisplayFor(modelitem => item.klant.Naam)
+				</td>
+
+            <td><a asp-action="EditBestelling" asp-route-id="@item.BestellingID" class="btn btn-primary">Edit</a></td>
+            <td><a asp-action="GetBestelling" asp-route-id="@item.BestellingID" class="btn btn-primary">Details</a></td>
+
+            <td><a asp-action="DeleteBestelling" asp-route-id="@item.BestellingID" class="btn btn-primary">Delete</a></td>
+
+        </tr>
+    }
+</table>
