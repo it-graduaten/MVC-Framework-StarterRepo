@@ -1,0 +1,27 @@
+﻿@model List<Klant>
+
+@{
+    ViewData["Title"] = "Overzicht klanten";
+}
+
+<table>
+    <thead>
+        <tr>
+            <th class="col-md-4">@Html.DisplayNameFor(modelItem => Model[0].KlantID)</th>
+            <th class="col-md-4">@Html.DisplayNameFor(modelItem => Model[0].Voornaam)</th>
+            <th class="col-md-4">@Html.DisplayNameFor(modelItem => Model[0].Familienaam)</th>
+            <th class="col-md-4">@Html.DisplayNameFor(modelItem => Model[0].AangemaaktDatum)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var klant in Model)
+        {
+            <tr>
+                <td class="col-md-4">@Html.DisplayFor(modelItem => klant.KlantID)</td>
+                <td class="col-md-4">@Html.DisplayFor(modelItem => klant.Voornaam)</td>
+                <td class="col-md-4">@Html.DisplayFor(modelItem => klant.Familienaam)</td>
+                <td class="col-md-4">@Html.DisplayFor(modelItem => klant.AangemaaktDatum)</td>
+            </tr>
+        }
+    </tbody>
+</table>
